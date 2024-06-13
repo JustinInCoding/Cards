@@ -23,7 +23,8 @@
 Xcode - 15.4 (the version I created the project)
 
 ## Tips and Learned
-- 
+- A ScrollView can be vertical or horizontal. The default, which you use here, is vertical, but you can specify a horizontal axis with ScrollView(.horizontal)
+- ScrollView(showsIndicators: false) can turns the scroll bar off
 
 
 ## Key Points
