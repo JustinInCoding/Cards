@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981CB7D92C1EF71700F70142 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CB7D82C1EF71700F70142 /* SingleCardView.swift */; };
+		981CB7DB2C1EF8DA00F70142 /* CardThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CB7DA2C1EF8DA00F70142 /* CardThumbnail.swift */; };
 		985AC4DF2C1B394F00140D34 /* CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AC4DE2C1B394F00140D34 /* CardsApp.swift */; };
 		985AC4E12C1B394F00140D34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AC4E02C1B394F00140D34 /* ContentView.swift */; };
 		985AC4E32C1B395000140D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985AC4E22C1B395000140D34 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		981CB7D82C1EF71700F70142 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		981CB7DA2C1EF8DA00F70142 /* CardThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardThumbnail.swift; sourceTree = "<group>"; };
 		985AC4DB2C1B394F00140D34 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985AC4DE2C1B394F00140D34 /* CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApp.swift; sourceTree = "<group>"; };
 		985AC4E02C1B394F00140D34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 				985AC4DE2C1B394F00140D34 /* CardsApp.swift */,
 				985AC4E02C1B394F00140D34 /* ContentView.swift */,
 				985AC4EC2C1B42E300140D34 /* CardsListView.swift */,
+				981CB7D82C1EF71700F70142 /* SingleCardView.swift */,
+				981CB7DA2C1EF8DA00F70142 /* CardThumbnail.swift */,
 				985AC4E22C1B395000140D34 /* Assets.xcassets */,
 				985AC4E42C1B395000140D34 /* Preview Content */,
 			);
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981CB7DB2C1EF8DA00F70142 /* CardThumbnail.swift in Sources */,
 				985AC4E12C1B394F00140D34 /* ContentView.swift in Sources */,
 				985AC4ED2C1B42E300140D34 /* CardsListView.swift in Sources */,
+				981CB7D92C1EF71700F70142 /* SingleCardView.swift in Sources */,
 				985AC4DF2C1B394F00140D34 /* CardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

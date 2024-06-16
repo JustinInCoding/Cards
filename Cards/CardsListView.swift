@@ -31,15 +31,21 @@
 import SwiftUI
 
 struct CardsListView: View {
+	@State private var isPresented = false
+
 	var body: some View {
-		ScrollView {
+		ScrollView(showsIndicators: false) {
 			VStack {
 				ForEach(0..<10) {_ in
-					RoundedRectangle(cornerRadius: 15.0)
-						.foregroundColor(.gray)
-						.frame(width: 150.0, height: 250.0)
+					CardThumbnail()
+						.onTapGesture {
+							isPresented = true
+						}
 				}
 			}
+		}
+		.fullScreenCover(isPresented: $isPresented)  {
+			SingleCardView()
 		}
 	}
 }
@@ -47,3 +53,5 @@ struct CardsListView: View {
 #Preview {
 	CardsListView()
 }
+
+
