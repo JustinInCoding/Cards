@@ -30,27 +30,48 @@
 
 import SwiftUI
 
-struct SingleCardView: View {
-	@Environment(\.dismiss) var dismiss
-	@State private var currentModal: ToolbarSelection?
+struct ToolbarButton: View {
+	let modal: ToolbarSelection
+
+	private let modelButton: [
+		ToolbarSelection : (text: String, imageName: String)
+	] = [
+		.photoModal: ("Photos", "photo"),
+		.frameModal: ("Frames", "square.on.circle"),
+		.stickerModal: ("Stickers", "heart.circle"),
+		.textModal: ("Text", "textformat")
+	]
 
 	var body: some View {
-		NavigationStack {
-			Color(.yellow)
-				.toolbar {
-					ToolbarItem(placement: .navigationBarTrailing) {
-						Button("Done") {
-							dismiss()
-						}
-					}
-					ToolbarItem(placement: .bottomBar) {
-						BottomToolbar(model: $currentModal)
-					}
+		if let text = modelButton[modal]?.text, let imageName = modelButton[modal]?.imageName {
+			VStack {
+				Image(systemName: imageName)
+					.font(.largeTitle)
+				Text(text)
+			}
+			.padding(.top)
+		}
+	}
+}
+
+struct BottomToolbar: View {
+	@Binding var model: ToolbarSelection?
+
+
+	var body: some View {
+		HStack {
+			ForEach(ToolbarSelection.allCases, id: \.self) { selection in
+				Button {
+					model = selection
+				} label: {
+					ToolbarButton(modal: selection)
+				}
 			}
 		}
 	}
 }
 
 #Preview {
-	SingleCardView()
+	BottomToolbar(model: .constant(.stickerModal))
+		.padding()
 }

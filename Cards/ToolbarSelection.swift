@@ -28,29 +28,8 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import Foundation
 
-struct SingleCardView: View {
-	@Environment(\.dismiss) var dismiss
-	@State private var currentModal: ToolbarSelection?
-
-	var body: some View {
-		NavigationStack {
-			Color(.yellow)
-				.toolbar {
-					ToolbarItem(placement: .navigationBarTrailing) {
-						Button("Done") {
-							dismiss()
-						}
-					}
-					ToolbarItem(placement: .bottomBar) {
-						BottomToolbar(model: $currentModal)
-					}
-			}
-		}
-	}
-}
-
-#Preview {
-	SingleCardView()
+enum ToolbarSelection: CaseIterable {
+	case photoModal, frameModal, stickerModal, textModal
 }
